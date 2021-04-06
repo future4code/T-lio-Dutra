@@ -1,0 +1,2 @@
+<h3># Aprendizados da semana</h3>
+<p>Nessa semana aprendi muitas coisas sobre git e vs, tem sido tudo muito legal e emocionante, estou muito ansioso para aprender mais coisa. Quase <b>surtei</b> hoje tentando fazer essa atividade.</p>
