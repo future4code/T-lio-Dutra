@@ -1,0 +1,21 @@
+div {
+  background-color: plum;
+}
+
+.texto-nao-importante {
+  color: purple;
+}
+
+body {
+  background-color:rgb(255, 192, 216) ;
+  border: 10px solid powderblue
+}
+
+.table-data {
+  background-color:powderblue;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+}
