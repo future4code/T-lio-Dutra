@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(250, 194, 222);
+    border: 10px solid plum
+}
+
+.table-data {
+    background-color:powderblue;
+}
+
+.table-name {
+    background-color: plum;
+}
+.photo {
+    width: 200px;
+    height: 200px;
+}
+
+th {
+    background-color:powderblue ;
+}
+
+.table-value {
+    background-color:plum ;
+}
+
+h2 {
+    background-color: plum;
+}
+
+label {
+    background-color: plum;
+}

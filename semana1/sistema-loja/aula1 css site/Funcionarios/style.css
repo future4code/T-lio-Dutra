@@ -4,7 +4,7 @@
 }
 
 td {
-  background-color: rgb(255, 192, 216);
+  background-color:plum;
 }
 
 .photo {
@@ -13,7 +13,11 @@ td {
 }
 
 body {
-  background-color: plum;
+  background-color:rgb(255, 192, 216);
   border: 10px solid powderblue;
+}
+
+th {
+  background-color: plum;
 }
 

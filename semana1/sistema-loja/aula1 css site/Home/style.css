@@ -1,6 +1,7 @@
 h1 {
-  color: rgb(201, 129, 201);
+  color: rgb(255, 149, 202);
   background-color: powderblue;
+  text-align: center;
 }
 
 .primeiro-paragrafo {
@@ -8,17 +9,16 @@ h1 {
   padding: 4px;
 }
 
-.segundo-paragrafo {
-  background-color: plum;
+
+p {
+  text-align: center;
+  background-color: rgb(255, 148, 198);
+  display: inline;
   padding: 4px;
 }
 
-p {
-  display: inline;
-}
-
 body {
-  background-color:rgb(255, 192, 216);
+  background-color:rgb(250, 194, 222);
   border: 10px solid plum;
 }
 
