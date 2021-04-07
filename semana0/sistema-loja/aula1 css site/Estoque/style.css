@@ -1,0 +1,30 @@
+#titulo-principal {
+  background-color: grey;
+  display: none;
+}
+
+.box {
+  background-color:pink;
+  width: 50%;
+  border: 8px solid plum;
+  padding: 34px;
+  box-sizing: border-box;
+}
+
+.box-container {
+  width: 100%;
+}
+
+body {
+  background-color: powderblue;
+  border: 10px solid plum;
+}
+
+h3 {
+  background-color: pink;
+}
+
+p {
+  background-color: pink;
+}
+

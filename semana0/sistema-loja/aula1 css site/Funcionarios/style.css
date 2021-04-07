@@ -1,0 +1,19 @@
+
+.table-data {
+  background-color:powderblue;
+}
+
+td {
+  background-color: rgb(255, 192, 216);
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+}
+
+body {
+  background-color: plum;
+  border: 10px solid powderblue;
+}
+
