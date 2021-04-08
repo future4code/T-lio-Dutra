@@ -1,0 +1,24 @@
+body {
+    background-color:rgb(250, 194, 222);
+    border: 10px solid plum;
+  }
+
+.layout {
+    background-color: powderblue;
+}
+
+li {
+    background-color: powderblue;
+}
+
+h2 {
+    background-color: plum;
+}
+
+legend {
+    background-color: plum;
+}
+
+label {
+    background-color: plum;
+}
