@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.header {
+    background-color: rgb(247, 183, 215);
+    height: 80px ;
+}
+
+.menu {
+    margin: 10px 0;
+}
+
+.menu a {
+    color:indigo;
+    border: 1px solid indigo;
+    padding: 5px;
+    margin: 5px;
+}
+
+#selected {
+    color: rgb(168, 233, 255);
+    border: 2px solid rgb(167, 229, 250);
+}
+
+a {
+    text-decoration: none;
+}
+
+#ppic {
+    height: 300px;
+}
+
+#Labenu-logo {
+    height: 100px;
+
+}
+
+button {
+    background-color: plum;
+    border: 2px solid indigo;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+
+}
+
+form input {
+    display: block;
+}
+
+.footer {
+    background-color: rgb(247, 183, 215);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: indigo;
+}
