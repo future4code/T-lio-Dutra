@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: pink;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+    justify-content: center;
+    flex-grow: 1;
+    height: 50%;
+}
+
+footer {
+    background-color: powderblue;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+}
+
+body {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.videocard {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    border: solid plum 2px;
+}
+
+#main1 {
+    display: block;
+}
+
+#main2 {
+    display: block;
+}
