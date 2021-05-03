@@ -1,0 +1,35 @@
+#fonte-grande {
+    font-size: 3rem;
+    background-color: lightskyblue;
+}
+
+#padding-grande {
+    padding: 2em 0;
+}
+
+#altura-grande {
+    height: 20vw;
+    background-color: pink;
+}
+
+#largura-grande {
+    width: 50vh;
+    background-color: plum;
+}
+
+div {
+    border: 1px solid lightblue;
+}
+
+#fonte {
+    font-size: 60%;
+}
+
+#comprimento {
+    width: 10%;
+    background-color: lightpink;
+}
+
+#altura {
+    height: 10%;
+}
