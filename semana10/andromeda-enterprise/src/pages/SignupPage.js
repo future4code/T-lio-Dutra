@@ -4,7 +4,7 @@ import axios from "axios";
 import { BASE_URL } from "../constants/urls";
 import { useHistory } from "react-router-dom";
 
-const LoginPage = () => {
+const SignupPage = () => {
     const [email, handleEmail] = useInput("");
     const [password, handlePassword] = useInput("");
     const history = useHistory();
@@ -13,27 +13,25 @@ const LoginPage = () => {
         document.title = "LabeX";
     });
 
-    const onClickLogin = () => {
+    const onClickSignup = () => {
         const body = { email, password };
         axios
-            .post(`${BASE_URL}/login`, body)
+            .post(`${BASE_URL}/signup`, body)
             .then((res) => {
-                localStorage.setItem("token", res.data.token);
-                history.push("/trip-detail");
-                console.log(body)
-                console.log(res.data.token)
+                history.push("/login");
+                alert("Conta criada com sucesso")
             })
             .catch((err) => alert(err.response.data.message));
     };
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Signup</h1>
             <input value={email} onChange={handleEmail} placeholder="Email"/>
             <input type="password" value={password} onChange={handlePassword} placeholder="Senha"/>
-            <button onClick={onClickLogin}>Enviar</button>
+            <button onClick={onClickSignup}>Criar</button>
         </div>
     );
 };
 
-export default LoginPage;
+export default SignupPage;
