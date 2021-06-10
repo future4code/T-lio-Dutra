@@ -9,19 +9,22 @@ const TripDetailPage = () => {
     const history = useHistory();
 
     useProtectedPage();
-    
+
     const getTripDetail = (id) => {
-        axios.get(`${BASE_URL}/trip/${id}`, {
+        axios.get(`${BASE_URL}/trips/${id}`, {
             headers: {
                 auth: localStorage.getItem("token")
             }
         })
-        .then((res) => {
-            setTrip(res.data.trip);
-        })
-        .catch((err) => alert("Acesso negado, porfavor conclua login no site."),
-        history.push("/"))
+            .then((res) => {
+                setTrip(res.data.trip);
+                history.push("/trip-detail")
+            })
     };
+
+    const goBack = () => {
+        history.goBack()
+    }
 
     useEffect(() => {
         getTripDetail("nLngxFS6rfO5NploohJn");
@@ -30,6 +33,7 @@ const TripDetailPage = () => {
     return (
         <div>
             <h1>Detalhe da Viagem</h1>
+            <button onClick={goBack}>Voltar</button>
             {trip.name ? trip.name : <p>Carregando...</p>}
         </div>
     );
@@ -37,4 +41,3 @@ const TripDetailPage = () => {
 
 export default TripDetailPage;
 
-    

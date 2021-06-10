@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom"
 
-    const HomePage = () => {
+const HomePage = () => {
     const history = useHistory()
 
     const goToLogin = () => {
@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom"
 
     const goToSignup = () => {
         history.push("/signup")
-    }
+    };
 
     const goToLista = () => {
         history.push("/trips")
@@ -18,9 +18,9 @@ import { useHistory } from "react-router-dom"
 
     const goBack = () => {
         history.goBack()
-    }
- 
-    return(
+    };
+
+    return (
         <div>
             <h1>Home</h1>
             <button onClick={goToLista}>Lista de Produtos</button>

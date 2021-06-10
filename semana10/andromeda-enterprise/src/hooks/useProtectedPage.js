@@ -8,6 +8,7 @@ const useProtectedPage = () => {
         const token = localStorage.getItem("token");
         if (token === null) {
             history.push("/");
+            alert("Acesso negado, porfavor conclua login no site.")
         }
     }, [history]);
 };
