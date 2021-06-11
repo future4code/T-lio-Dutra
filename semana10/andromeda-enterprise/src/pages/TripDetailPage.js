@@ -8,27 +8,30 @@ const TripDetailPage = () => {
     const [trip, setTrip] = useState({});
     const history = useHistory();
 
-    useProtectedPage();
-
-    const getTripDetail = (id) => {
-        axios.get(`${BASE_URL}/trips/${id}`, {
-            headers: {
-                auth: localStorage.getItem("token")
-            }
-        })
-            .then((res) => {
-                setTrip(res.data.trip);
-                history.push("/trip-detail")
-            })
-    };
-
     const goBack = () => {
         history.goBack()
-    }
+    };
+
+    useProtectedPage();
 
     useEffect(() => {
+        const getTripDetail = (id) => {
+            axios
+                .get(`${BASE_URL}/trip/${id}`, {
+                    headers: {
+                        auth: localStorage.getItem("token")
+                    }
+                })
+                .then((res) => {
+                    setTrip(res.data.trip);
+                })
+                .catch((err) => {
+                    alert(err.response.data.message);
+                });
+        };
+
         getTripDetail("nLngxFS6rfO5NploohJn");
-    }, [history]);
+    }, [setTrip]);
 
     return (
         <div>

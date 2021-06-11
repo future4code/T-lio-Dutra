@@ -3,11 +3,10 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 import HomePage from "../pages/HomePage"
 import LoginPage from "../pages/LoginPage"
 import TripDetailPage from "../pages/TripDetailPage"
-import AdminHomePage from "../pages/AdminHomePage"
+import AdministrativePage from "../pages/AdministrativePage"
 import ApplicationFormPage from "../pages/ApplicationFormPage"
 import ListTripsPage from "../pages/ListTripsPage"
 import CreateTripPage from "../pages/CreateTripPage"
-import SignupPage from "../pages/SignupPage"
 
 const Router = () => {
     return (
@@ -15,9 +14,6 @@ const Router = () => {
             <Switch>
                 <Route exact path="/">
                     <HomePage />
-                </Route>
-                <Route exact path="/signup">
-                    <SignupPage />
                 </Route>
                 <Route exact path="/login">
                     <LoginPage />
@@ -32,7 +28,7 @@ const Router = () => {
                     <ApplicationFormPage />
                 </Route>
                 <Route exact path="/adm-home">
-                    <AdminHomePage />
+                    <AdministrativePage />
                 </Route>
                 <Route exact path="/create-trip">
                     <CreateTripPage />

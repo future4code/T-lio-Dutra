@@ -7,7 +7,7 @@ const useProtectedPage = () => {
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (token === null) {
-            history.push("/");
+            history.push("/login");
             alert("Acesso negado, porfavor conclua login no site.")
         }
     }, [history]);

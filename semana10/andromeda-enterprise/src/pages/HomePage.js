@@ -4,12 +4,8 @@ import { useHistory } from "react-router-dom"
 const HomePage = () => {
     const history = useHistory()
 
-    const goToLogin = () => {
-        history.push("/login")
-    };
-
-    const goToSignup = () => {
-        history.push("/signup")
+    const goToAdministrativePage = () => {
+        history.push("/adm-home")
     };
 
     const goToLista = () => {
@@ -24,8 +20,7 @@ const HomePage = () => {
         <div>
             <h1>Home</h1>
             <button onClick={goToLista}>Lista de Produtos</button>
-            <button onClick={goToSignup}>Signup</button>
-            <button onClick={goToLogin}>Login</button>
+            <button onClick={goToAdministrativePage}>Area Admnistrativa</button>
             <button onClick={goBack}>Voltar</button>
         </div>
     );
