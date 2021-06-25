@@ -13,7 +13,7 @@ export const Card = styled.div `
     width: 300px;
     margin: 10px;
 `
-export const Titulo = styled.h3 `
+export const Titulo = styled.div `
     background-color: pink;
     margin-top: 0;
     display: flex;
@@ -28,9 +28,8 @@ export const Footer = styled.div `
     display: flex;
     justify-content: space-around;
 `
-export const CommentButton = styled.button`
-    height: 40px;
-    margin-top: 5px;
+export const Comments = styled.p`
+    cursor: pointer;
 `
 export const InputsContainer = styled.div`
     display: flex;

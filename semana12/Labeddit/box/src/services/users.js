@@ -24,3 +24,4 @@ export const signUp = (body, clear, history, setRightButtonText) => {
         })
         .catch((err) => alert(err.response.data.errors[0].password))
 }
+

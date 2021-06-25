@@ -3,16 +3,14 @@ import { InputsContainer } from "./styled";
 import { TextField } from "@material-ui/core";
 import useForm from "../../hooks/useForm"
 import { Button } from "@material-ui/core";
-import { login } from "../../services/users";
-import { useHistory } from "react-router-dom";
+import {CreateNewPost} from "../../services/post";
 
-const PostForm = ({postForm}) => {
+const PostForm = () => {
     const [form, onChange, clear] = useForm({ title: "", body: "" })
-    const history = useHistory()
     
     const onSubmitForm = (event) => {
         event.preventDefault()
-        login(form, clear, history, postForm)
+        CreateNewPost(form, clear)
     }
 
     return (

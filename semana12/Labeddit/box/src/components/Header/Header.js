@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { StyledToolBar, IconImage } from './styled';
 import Button from '@material-ui/core/Button';

@@ -2,24 +2,24 @@ import React from "react";
 import { BASE_URL } from "../../constants/urls";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import useRequestData from "../../hooks/useRequestData";
-import { PostListContainer, Card, Titulo, Body, Footer, CommentButton } from "./styled";
+import { PostListContainer, Card, Titulo, Body, Footer, Comments } from "./styled";
 import PostForm from "./FeedPostForm";
 import { useHistory } from "react-router-dom";
+import { goToPost } from "../../routes/coordinator";
 
 
 const FeedPage = () => {
     useProtectedPage()
     const history = useHistory()
     const posts = useRequestData([], `${BASE_URL}/posts`)
-    console.log(posts)
 
-    const onClickComment = () => {
-        history.push("/post")
+    const onClickComment = (id) => {
+        goToPost(history, id.id)
     }
 
-    const postsCards = posts.map((post) => { 
-        return (
-            <Card key={post.id}>
+    const postsCards = posts.map((post) => {
+        if (post.commentCount === null) {
+            return (<Card key={post.id}>
                 <Titulo>
                     <h3>{post.title}</h3>
                 </Titulo>
@@ -28,16 +28,32 @@ const FeedPage = () => {
                 </Body>
                 <Footer>
                     <p>Like</p>
-                    <CommentButton onClick={onClickComment}>Comentar</CommentButton>
+                    <Comments onClick={() => onClickComment(post)}>Comentarios(0)</Comments>
                 </Footer>
-            </Card>
-        )
+            </Card>)
+        }
+        else {
+            return (
+                <Card key={post.id}>
+                    <Titulo>
+                        <h3>{post.title}</h3>
+                    </Titulo>
+                    <Body>
+                        <p>{post.body}</p>
+                    </Body>
+                    <Footer>
+                        <p>Like</p>
+                        <Comments onClick={() => onClickComment(post)}>Comentarios({post.commentCount})</Comments>
+                    </Footer>
+                </Card>
+            )
+        }
     })
 
     return (
         <PostListContainer>
             <h1>FeedPage</h1>
-            <PostForm/>
+            <PostForm />
             {postsCards}
         </PostListContainer>
     )
