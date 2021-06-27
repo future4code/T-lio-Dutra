@@ -14,19 +14,18 @@ export const Card = styled.div `
     margin: 10px;
 `
 export const Titulo = styled.div `
-    background-color: pink;
-    margin-top: 0;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
 `
 export const Body = styled.div `
-    background-color: plum;
     display: flex;
     justify-content: space-evenly;
 `
 export const Footer = styled.div `
     display: flex;
     justify-content: space-around;
+    background-color: #6A6A6D;
 `
 export const Comments = styled.p`
     cursor: pointer;

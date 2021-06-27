@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BASE_URL } from "../../constants/urls";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import useRequestData from "../../hooks/useRequestData";
@@ -16,7 +16,6 @@ const FeedPage = () => {
     const onClickComment = (id) => {
         goToPost(history, id.id)
     }
-
     const postsCards = posts.map((post) => {
         if (post.commentCount === null) {
             return (<Card key={post.id}>
@@ -52,7 +51,6 @@ const FeedPage = () => {
 
     return (
         <PostListContainer>
-            <h1>FeedPage</h1>
             <PostForm />
             {postsCards}
         </PostListContainer>
