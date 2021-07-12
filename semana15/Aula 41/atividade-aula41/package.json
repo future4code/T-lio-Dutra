@@ -1,0 +1,11 @@
+{
+  "name": "atividade-aula41",
+  "version": "1.0.0",
+  "description": "Para executar os comandos, rode os comandos na root do projeto. Lembre de dar o comando: npm install",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Tulio Dias",
+  "license": "ISC"
+}
