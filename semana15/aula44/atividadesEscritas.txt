@@ -1,0 +1,11 @@
+1) a: GET
+   b:  ("/users") ou ("/user")
+
+2) a: foram passados pelo Query, que é usado para buscar informações de um mesmo conjunto
+   b: atravez da validação
+
+3) a: Query params
+
+
+4) a: não ocorre nada diferente, PUT tambem pode ser usado para criar items caso os mesmo não exista no banco de dados
+   b: não, pois ja existe o método post, feito exclusivamente para criar novos items
