@@ -1,0 +1,11 @@
+{
+  "name": "exercicio-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Exercicio2.js",
+  "scripts": {
+    "start": "node ./Exercicio2.js"
+  },
+  "author": "Tulio Dias",
+  "license": "ISC"
+}
