@@ -1,17 +1,16 @@
-import express, {Express} from "express"
-import cors from "cors"
-import { AddressInfo } from "net"
+import { app } from "./app"
+import { createCountry } from "./endpoints/createCountry"
+import { deleteCountryById } from "./endpoints/deleteCountryById"
+import { editCountry } from "./endpoints/editCountry"
+import { getAllCountries } from "./endpoints/getAllCountries"
+import { getCountryById } from "./endpoints/getCountryById"
+import { getRandomCountry } from "./endpoints/getRandomCountry"
+import { searchCountryFilters } from "./endpoints/searchCountryFilters"
 
-const app: Express = express();
-
-app.use(express.json());
-app.use(cors());
-
-const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-       const address = server.address() as AddressInfo;
-       console.log(`Server is running in http://localhost: ${address.port}`);
-    } else {
-       console.error(`Failure upon starting server.`);
-    }
-});
+app.get("/countries", getAllCountries) 
+app.get("/countries/random", getRandomCountry)
+app.get("/countries/search", searchCountryFilters)
+app.get("/countries/:id", getCountryById)
+app.post("/countries", createCountry)
+app.post("/countries/:id", editCountry)
+app.delete("/countries/:id", deleteCountryById)
