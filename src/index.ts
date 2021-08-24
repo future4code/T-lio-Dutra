@@ -1,7 +1,9 @@
-import { app } from "./app";
-import { getUsersByType } from "./endpoints/getUserByType";
-import { getUsersByName } from "./endpoints/getUsersByName";
+import app from "./app"
+import createCharacter from "./endpoints/createCharacter"
+import deleteCharacter from "./endpoints/deleteCharacter"
+import getAllCharacters from "./endpoints/getAllCharacters"
 
-
-app.get("/user", getUsersByName)
-app.get("/user/:type", getUsersByType)
+app.get("/character", getAllCharacters)
+// app.get("/movie/:id/characters")
+app.put("/character", createCharacter)
+app.delete("/character/:id", deleteCharacter)
