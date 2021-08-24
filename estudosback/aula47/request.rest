@@ -1,0 +1,39 @@
+GET http://localhost:3003
+
+###
+
+POST http://localhost:3003/actor
+Content-Type: application/json
+
+{
+    "name": "Cleo Pires",
+    "salary": 3000000,
+    "birth_date": "1978-12-05",
+    "gender": "female"
+}
+
+###
+
+PUT http://localhost:3003/actor/002
+Content-Type: application/json
+
+{
+   "name": "Glória Pires",
+   "salary": 2700000,
+   "birth_date": "1963-08-23",
+   "gender": "female" 
+}
+
+###
+
+DELETE http://localhost:3003/actor/1628696559663
+Content-Type: application/json
+
+###
+
+GET http://localhost:3003/actor
+Content-Type: application/json
+
+{
+    "name": "Tony"
+}
