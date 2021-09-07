@@ -1,0 +1,39 @@
+PUT http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "nome": "Sarah",
+    "apelido": "Sarinha",
+    "email": "sarah@gmail.com"
+}
+
+###
+GET http://localhost:3003/user/all
+
+###
+GET http://localhost:3003/user/1630604196326
+
+###
+PUT http://localhost:3003/user/edit/1630604196326
+Content-Type: application/json
+
+{
+    "apelido": "Princesa"
+}
+
+###
+PUT http://localhost:3003/task
+Content-Type: application/json
+
+{
+  "titulo": "Lavar Louça",
+  "descricao": "lavar tudo",
+  "prazo": "03/09/2021",
+  "id_criador": "1630604196326" 
+}
+
+###
+GET http://localhost:3003/task/1630609467063
+
+###
+GET http://localhost:3003/task
