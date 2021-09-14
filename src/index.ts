@@ -1,9 +1,14 @@
-import app from "./app"
-import createCharacter from "./endpoints/createCharacter"
-import deleteCharacter from "./endpoints/deleteCharacter"
-import getAllCharacters from "./endpoints/getAllCharacters"
+import { app } from "./app";
+import { getAllPokes } from "./endpoints/getAllPokes";
+import { getByGenerations } from "./endpoints/getByGenerations";
+import { getPokemonByName } from "./endpoints/getPokemonByName";
+import { getPokemonsByType } from "./endpoints/getPokemonsByType";
 
-app.get("/character", getAllCharacters)
-// app.get("/movie/:id/characters")
-app.put("/character", createCharacter)
-app.delete("/character/:id", deleteCharacter)
+// pegar todos com paginação
+// pegar por nome
+// pegar por tipo
+// pegar por geração
+app.get("/", getAllPokes)
+app.get("/pokemons/:name", getPokemonByName)
+app.get("/pokemons", getPokemonsByType)
+app.get("/pokemons/generation/:generation", getByGenerations)
