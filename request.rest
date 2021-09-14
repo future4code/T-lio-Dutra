@@ -1,0 +1,11 @@
+GET http://localhost:3003/?page=1
+
+###
+
+GET http://localhost:3003/pokemons/Celebi
+
+###
+GET http://localhost:3003/pokemons?type=fairy&page=3
+
+###
+GET http://localhost:3003/pokemons/generation/6?page=3
