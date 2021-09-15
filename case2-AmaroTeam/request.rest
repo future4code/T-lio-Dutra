@@ -1,0 +1,14 @@
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name": "Dinossaur",
+    "tag": "Toys",
+    "description": "A fluffy T-rex for your kids"
+}
+
+###
+GET http://localhost:3003/products
+
+###
+GET http://localhost:3003/products/1
