@@ -1,9 +1,12 @@
-import app from "./app"
-import createCharacter from "./endpoints/createCharacter"
-import deleteCharacter from "./endpoints/deleteCharacter"
-import getAllCharacters from "./endpoints/getAllCharacters"
+import { app } from "./app";
+import { criarAtleta } from "./endpoints/criarAtleta";
+import { criarCompeticaoCorrida } from "./endpoints/criarCompeticaoCorrida";
+import { criarCompeticaoDardo } from "./endpoints/criarCompeticaoDardo";
+import { rankingCorrida } from "./endpoints/rankingCorrida";
+import { rankingDardo } from "./endpoints/rankingDardo";
 
-app.get("/character", getAllCharacters)
-// app.get("/movie/:id/characters")
-app.put("/character", createCharacter)
-app.delete("/character/:id", deleteCharacter)
+app.get("/rankcorrida", rankingCorrida)
+app.get("/rankdardo", rankingDardo)
+app.post("/atleta", criarAtleta)
+app.post("/compcorrida", criarCompeticaoCorrida)
+app.post("/compdardo", criarCompeticaoDardo)
