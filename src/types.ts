@@ -1,18 +1,28 @@
-export type movie = {
+export type Atleta = {
     id: number,
-    title: string,
-    year: number
+    esporte: Esporte,
+    nome: string
 }
 
-export enum GENDER {
-    MALE = "MALE",
-    FEMALE = "FEMALE",
-    OTHER = "OTHER"
+export type CompCorrida = {
+    id: number,
+    atleta_id: number,
+    competicao: string,
+    valor: number,
+    unidade: string
 }
 
-export type character = {
+export type CompDardo = {
     id: number,
-    name: string,
-    gender: GENDER,
-    description?: string
+    atleta_id: number,
+    competicao: string,
+    valor1: number,
+    valor2: number,
+    valor3: number,
+    unidade: string
+}
+
+export enum Esporte {
+    CORRIDA = "100m",
+    DARDO = "Dardo"
 }

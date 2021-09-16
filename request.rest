@@ -1,0 +1,40 @@
+POST http://localhost:3003/atleta
+Content-Type: application/json
+
+{
+    "id": 4,
+    "esporte": "Dardo",
+    "nome": "Alice"
+}
+
+###
+POST http://localhost:3003/compcorrida
+Content-Type: application/json
+
+{
+    "id": 2,
+    "atleta_id": 2,
+    "competicao": "100m Final",
+    "valor": 10.5,
+    "unidade": "s"
+}
+
+###
+POST http://localhost:3003/compdardo
+Content-Type: application/json
+
+{
+    "id": 2,
+    "atleta_id": 4,
+    "competicao": "Dardo Final",
+    "valor1": 75.5,
+    "valor2": 72,
+    "valor3": 95.60,
+    "unidade": "m"
+}
+
+###
+GET http://localhost:3003/rankcorrida
+
+###
+GET http://localhost:3003/rankdardo
